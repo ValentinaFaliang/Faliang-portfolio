@@ -1,0 +1,31 @@
+.about {
+  width: 100%;
+  background-color: #ffdada;
+  margin: 0;
+  padding: 0 220px;
+
+  &__container {
+    margin: 100px 0;
+
+    title {
+      display: block;
+      h1 {
+        font-size: 50px;
+        line-height: 50px;
+        text-transform: uppercase;
+        color: #cc7cf3;
+        margin: 0;
+      }
+    }
+
+    main {
+      p {
+        font-size: 15px;
+        line-height: 30px;
+        letter-spacing: 1px;
+      }
+    }
+
+
+  }
+}

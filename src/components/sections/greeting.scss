@@ -1,0 +1,80 @@
+.greeting {
+    width: 100%;
+    padding: 0 70px;
+    figure {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+
+      div {
+        padding-top: 55px;
+        display: flex;
+        height: auto;
+        width: 800px;
+        height: 460px;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          width: 460px;
+          height: auto;
+          filter: drop-shadow(7px -13px 1px #f4dd89);
+          transition: transform 0.2s;
+          position: absolute;
+        }
+
+        img:hover {
+          transform: scale(1.2);
+        }
+
+        #faliang1 {
+          z-index: 10;
+          right: 30%;
+        }
+
+        #faliang2 {
+          z-index: 5;
+          right: 0%;
+        }
+      }
+
+      figcaption {
+        display: block;
+        margin-top: 130px;
+        line-height: 48px;
+        height: fit-content;
+        color: var(--whitecolor);
+        p {
+          font-size: 20px;
+          font-weight: 200;
+          margin: 0;
+        }
+        h1 {
+          font-size: 50px;
+          font-weight: 900;
+          text-transform: uppercase;
+          margin: 0;
+          white-space: nowrap;
+        }
+
+        button {
+          background-color: #cc7cf3;
+          border: 0.1rem solid var(--whitecolor);
+          height: 70px;
+          width: 170px;
+          max-width: 100%;
+
+          span {
+            font-family: "Changa", sans-serif;
+            color: var(--whitecolor);
+            font-size: 15px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }

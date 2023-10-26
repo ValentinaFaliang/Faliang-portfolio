@@ -1,0 +1,57 @@
+
+.header {
+  --textcolor: azure;
+  display: block;
+  width: 100%;
+  padding: 0 70px;
+
+  &__nav {
+    display: block;
+    width: 100%;
+
+    &__section {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      &__logo {
+        width: fit-content;
+        height: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+
+        img {
+          width: 200px;
+          height: auto;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-color: transparent;
+        }
+      }
+
+      &__links {
+        width: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 20px;
+        align-items: center;
+
+        a {
+          font-size: 20px;
+          color: var(--textcolor);
+          text-transform: uppercase;
+          padding: 0 22px;
+        }
+
+        .divider{
+          content: "";
+          height: 40px;
+          width: 7px;
+          background: var(--textcolor);
+        }
+      }
+    }
+  }
+}
