@@ -13,14 +13,26 @@
     margin-top: 30px;
     button {
       text-transform: uppercase;
-      font-size: 60px;
+      max-width: 100%;
+      margin-left: 5px;
+      transition:all 1s;
+    }
+
+    &__small{
+      font-size: 15px;
+    color: #cc7cf3;
+    background-color: azure;
+    border: 0.1rem solid #cc7cf3;
+    height: 50px;
+    width: 100px;
+    }
+    &__big{
+      font-size: 50px;
       color: azure;
       background-color: #cc7cf3;
       border: 0.1rem solid azure;
       height: 200px;
       width: 400px;
-      max-width: 100%;
-      margin-left: 5px;
     }
   }
 
@@ -56,6 +68,7 @@
           width: 300px;
           height: 300px;
           overflow: hidden;
+          animation: appear 2s;
         }
       }
     }
@@ -91,6 +104,7 @@
             display: flex;
             flex-basis: 100%;
             justify-content: center;
+            animation: appear 2s;
           }
         }
       }
@@ -122,8 +136,18 @@
           width: 300px;
           height: 300px;
           overflow: hidden;
+          animation: appear 2s;
         }
       }
     }
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
