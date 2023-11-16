@@ -11,11 +11,9 @@ export const randomizerSlice = createSlice({
   initialState,
   reducers: {
     generateNumb: (state, { payload }) => {
-      console.log(payload);
       if (!payload) {
         const newState = Object.keys(state).reduce((acc, key) => {
           acc[key] = Math.floor(Math.random() * 6);
-          console.log(Object.keys(state));
           return acc;
         }, {});
 

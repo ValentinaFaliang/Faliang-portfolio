@@ -2,6 +2,20 @@
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #c879f4;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #f4dd89;
+  border-radius: 20px;
+  border: 3px solid #ffffff
+}
+
 body{
   font-family: 'Changa', sans-serif;
   color: rgb(22, 22, 22);

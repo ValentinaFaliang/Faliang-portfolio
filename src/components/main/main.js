@@ -19,7 +19,7 @@ const Main = () => {
             return <img key={index} src={flower} />;
           })}
         </div>
-        <Greeting/>
+        <Greeting />
         <About/>
         <Hobbies/>
       </div>
