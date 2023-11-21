@@ -2,6 +2,8 @@
     width: 100%;
     padding: 0 70px;
     position: relative;
+    margin-top: 80px;
+
     figure {
       width: 100%;
       height: fit-content;
@@ -70,7 +72,7 @@
           height: 70px;
           width: 170px;
           max-width: 100%;
-          z-index: 1000;
+          z-index: 990;
 
           span {
             font-family: "Changa", sans-serif;

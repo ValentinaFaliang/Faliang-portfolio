@@ -1,12 +1,10 @@
 .contact {
   --textcolor: rgb(97, 26, 74);
-  --violetcolor:#c879f4;
+  --violetcolor: #c879f4;
   --yellowcolor: #fdf4b6;
 
   position: fixed;
   inset: 0;
-  // height: 100%;
-  // width: 90%;
   z-index: 1001;
   background-color: rgba(0, 0, 0, 0.2);
 
@@ -132,13 +130,13 @@
         }
       }
 
-      &__buttons{
+      &__buttons {
         width: 100%;
         display: flex;
         justify-content: center;
         margin-bottom: 5px;
         padding: 5px;
-        input{
+        input {
           height: 30px;
           width: 60px;
           border: 0.1rem solid var(--textcolor);
@@ -150,4 +148,30 @@
       }
     }
   }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.showModal {
+  animation: appear 1s;
+}
+
+.hideModal {
+  animation: disappear 1s;
 }

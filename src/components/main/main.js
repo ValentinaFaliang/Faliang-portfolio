@@ -6,7 +6,8 @@ import yellow from "../../assets/flowers/yellow3.png";
 import yellow2 from "../../assets/flowers/yellow2.png";
 import purple from "../../assets/flowers/purple3.png";
 import purple2 from "../../assets/flowers/purple2.png";
-import {Greeting, About, Hobbies } from "../sections";
+import {Greeting, About, Hobbies, Experience, Projects, Links } from "../sections";
+import { Outlet} from "react-router-dom";
 
 const flowers = [white, white2, yellow, yellow2, purple, purple2];
 
@@ -22,7 +23,11 @@ const Main = () => {
         <Greeting />
         <About/>
         <Hobbies/>
+        <Experience/>
+        <Projects/>
+        <Links/>
       </div>
+      <Outlet />
     </main>
   );
 };

@@ -1,8 +1,13 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./contact.scss";
+import { useNavigate } from "react-router-dom";
 
-const Contact = ({ open, onClose }) => {
-  let contactRef = useRef();
+const Contact = () => {
+  const [showHideAnimation, setShowHideAnimation] = useState(false);
+  const contactRef = useRef();
+  const [open, setOpen] = useState(true);
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
@@ -14,9 +19,18 @@ const Contact = ({ open, onClose }) => {
 
   const handleOutsideClick = (e) => {
     if(!contactRef.current.contains(e.target)){
-      onClose();
+      handleClose();
     }
-  }
+  };
+
+  const handleClose = () => {
+    setShowHideAnimation(true);
+    setTimeout(() => {
+      setShowHideAnimation(false);
+      setOpen(false);
+      navigate(-1);
+    }, 1000);
+  };
 
   if (!open) {
     return null;
@@ -24,10 +38,10 @@ const Contact = ({ open, onClose }) => {
 
   return (
     <article onClick={handleOutsideClick} className="contact">
-      <div ref={contactRef} className="contact__container">
+      <div ref={contactRef} className={`contact__container ${showHideAnimation ? 'hideModal' : 'showModal'}`}>
         <form className="contact__container__form">
           <div className="contact__container__form__closebtn">
-            <span onClick={onClose}>x</span>
+            <span onClick={handleClose}>x</span>
           </div>
           <div className="contact__container__form__name">
             <input type="text" placeholder="First name"></input>

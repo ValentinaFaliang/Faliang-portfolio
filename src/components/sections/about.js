@@ -1,11 +1,9 @@
 import React from "react";
 import "./about.scss";
 
-
-
 const About = () => {
   return (
-    <section className="about">
+    <section id="about" className="about">
       <div className="about__container">
         <title>
           <h1>About</h1>
