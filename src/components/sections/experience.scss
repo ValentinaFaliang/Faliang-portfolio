@@ -1,0 +1,62 @@
+.experience {
+  z-index: 5;
+  width: 100%;
+  background-color: #ffdada;
+  margin: 0;
+  padding: 100px 220px;
+  &__header {
+    h1 {
+      font-size: 50px;
+      line-height: 50px;
+      text-transform: uppercase;
+      color: #cc7cf3;
+      margin: 0;
+    }
+  }
+
+  &__main {
+    width: 100%;
+    dl {
+      border: dotted azure;
+      border-radius: 3%;
+      padding: 10px;
+      dt {
+        text-decoration: underline;
+        font-weight: 600;
+      }
+      dd {
+        details {
+          summary {
+            width: fit-content;
+            padding: 5px;
+          }
+          summary::marker {
+            color: #cc7cf3;
+          }
+          summary:hover {
+            background: rgb(255, 187, 187);
+            background: linear-gradient(
+              90deg,
+              rgba(255, 187, 187, 1) 0%,
+              rgba(255, 170, 170, 1) 35%,
+              rgba(255, 255, 255, 1) 100%
+            );
+            color: #c879f4;
+          }
+          p {
+            padding: 10px;
+
+            ul{
+                li{}
+
+                li::marker{
+                    content: "✽";
+                    color: rgba(255, 170, 170, 1) ;
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+}

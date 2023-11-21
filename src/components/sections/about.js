@@ -10,7 +10,7 @@ const About = () => {
         </title>
         <main>
           <p>
-            My name is Valentina Vlasenko or simply Faliang. I’m a junior
+            My name is <label>Valentina Vlasenko</label> or simply <label>Faliang</label>. I’m a junior
             frontend software engineer & freelance web developer in
             Saint-Petersburg -- with roots in teaching chinese & chinese
             translating. I'm passionate about art, technology, chinese and

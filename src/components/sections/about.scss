@@ -5,6 +5,9 @@
   padding: 0 220px;
   &__container {
     margin: 100px 0;
+    border: dotted azure;
+    border-radius: 3%;
+    padding: 10px;
 
     title {
       display: block;
@@ -24,7 +27,5 @@
         letter-spacing: 1px;
       }
     }
-
-
   }
 }
