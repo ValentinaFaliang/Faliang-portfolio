@@ -22,9 +22,21 @@ body {
   color: rgb(22, 22, 22);
   background-color: rgb(255 187 187);
   margin: 0;
+  scroll-behavior: smooth;
+  cursor: url("./assets/cursor/cursor-for-body.png"), auto;
 }
 
 a {
   text-decoration: none;
 }
 
+a:hover {
+  cursor: url("./assets/cursor/cursor-for-link.png"), auto;
+}
+
+button {
+  cursor: url("./assets/cursor/cursor.png"), auto;
+}
+input:hover {
+  cursor: url("./assets/cursor/cursor.png"), auto;
+}

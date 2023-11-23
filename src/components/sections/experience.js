@@ -34,7 +34,7 @@ const Experience = () => {
               <summary>6/2020 - now</summary>
               <p>
                 I have been doing chinese translator job since June 2020 till
-                now. I am translating:
+                now. I am translating from chinese to russian:
                 <ul>
                   <li>poems</li>
                   <li>news</li>

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../assets/logo/logo.png";
 import "./header.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   const [scrollTop, setScrollTop] = useState(0);
 
   useEffect(() => {
@@ -60,7 +61,7 @@ const Header = () => {
                     ? "header__nav__section__links__link2"
                     : "header__nav__section__links__link"
                 }
-                href="#projects"
+                href="/#projects"
               >
                 Projects
               </a>
@@ -70,7 +71,7 @@ const Header = () => {
                     ? "header__nav__section__links__link2"
                     : "header__nav__section__links__link"
                 }
-                href="#links"
+                href="/#links"
               >
                 Links
               </a>

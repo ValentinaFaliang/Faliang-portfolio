@@ -3,7 +3,7 @@
   width: 100%;
   background-color: #ffdada;
   margin: 0;
-  padding: 100px 220px;
+  padding: 100px 220px 40px 220px;
   &__header {
     h1 {
       font-size: 50px;
@@ -47,7 +47,7 @@
             padding: 10px;
 
             ul{
-                li{}
+                // li{}
 
                 li::marker{
                     content: "✽";
