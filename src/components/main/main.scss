@@ -3,6 +3,7 @@ $randomNumber: random(5);
 .main {
   --whitecolor: azure;
   width: 100%;
+  height: fit-content;
 
   &__container {
     display: flex;

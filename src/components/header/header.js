@@ -94,7 +94,7 @@ const Header = () => {
                 }
                 to="/blog"
               >
-                Blog
+                Feedback
               </Link>
             </div>
           </section>

@@ -1,3 +1,57 @@
 .footer {
-    background: #f4dc8c;
+  width: 100%;
+  height: fit-content;
+  background: rgba(244, 220, 128, 1);
+
+  &__wrapper {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    
+
+    p{
+        color: rgb(22, 22, 22);
+        z-index: 9;
+        margin-right: 4px;
+    }
+
+    a {
+      color: rgb(22, 22, 22);
+      z-index: 7;
+      background: transparent;
+      transition: all 0.3s ease 0s;
+      position: relative;
+    }
+
+    a::after {
+      z-index: -6;
+      content: "";
+      position: absolute;
+      height: 0%;
+      width: 100%;
+      bottom: -1px;
+      left: 0px;
+      opacity: 1;
+      transition: all 0.3s ease 0s;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 187, 187, 1) 0%,
+        rgba(255, 170, 170, 1) 35%,
+        rgba(255, 255, 255, 1) 100%
+      );
+    }
+
+    a:hover {
+      color: #c879f4;
+    }
+
+    a:hover:after {
+      height: 100%;
+      width: 100%;
+      opacity: 1;
+    }
+  }
 }

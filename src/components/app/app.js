@@ -12,13 +12,15 @@ const App = () => {
   return (
     <div className="wrapper__fullPage">
       <BrowserRouter>
-      <Header />
-        <Routes>
-          <Route path="/" element={<Main />}>
-            <Route path="contact" element={<Contact />} />
-          </Route>
-          <Route path="/blog" element={<Blog/>}/>
-        </Routes>
+        <div className="wrapper__fullPage__content">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Main />}>
+              <Route path="contact" element={<Contact />} />
+            </Route>
+            <Route path="/blog" element={<Blog />} />
+          </Routes>
+        </div>
         <Footer />
       </BrowserRouter>
     </div>
