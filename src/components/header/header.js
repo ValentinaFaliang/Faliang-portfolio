@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../assets/logo/logo.png";
 import "./header.scss";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { showModal } from "../../features/modalStatus/modalStatus";
 
 const Header = () => {
-  const navigate = useNavigate();
   const [scrollTop, setScrollTop] = useState(0);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,16 +21,20 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    return () => window.scrollTo(0, 0)
+  }, [window.location.pathname])
+
   return (
     <>
       <header className="header">
-      <div className={scrollTop > 30 ? "headerScrollMask" : "headerMask"} />
+        <div className={scrollTop > 30 ? "headerScrollMask" : "headerMask"} />
         <nav className="header__nav">
           <section className="header__nav__section">
             <div className="header__nav__section__logo">
               <Link to="/">
                 <img
-                  onClick={() =>  window.scrollTo(0, 0)}
+                  onClick={() => window.scrollTo(0, 0)}
                   src={logo}
                   alt="logo_法liang"
                 />
@@ -75,16 +81,19 @@ const Header = () => {
               >
                 Links
               </a>
-              <Link
+              <a
                 className={
                   scrollTop > 30
                     ? "header__nav__section__links__link2"
                     : "header__nav__section__links__link"
                 }
-                to="/contact"
+                onClick={(event) => {
+                  event.preventDefault();
+                  dispatch(showModal(true));
+                }}
               >
                 Contact
-              </Link>
+              </a>
               <span className="divider"></span>
               <Link
                 className={
@@ -92,7 +101,7 @@ const Header = () => {
                     ? "header__nav__section__links__link2"
                     : "header__nav__section__links__link"
                 }
-                to="/blog"
+                to="/feedback"
               >
                 Feedback
               </Link>

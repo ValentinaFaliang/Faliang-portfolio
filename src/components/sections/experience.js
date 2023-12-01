@@ -12,7 +12,7 @@ const Experience = () => {
           <dt>Freelance frontend developer</dt>
           <dd>
             <details>
-              <summary>12/2021 - now</summary>
+              <summary>01/2023 - now</summary>
               <p>
                 I have been doing freelance job since December 2021 till now. My
                 main occupation is creating the visual part of web-sites. The

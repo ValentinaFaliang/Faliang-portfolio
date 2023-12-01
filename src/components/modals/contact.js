@@ -1,21 +1,22 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./contact.scss";
-import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { showModal } from "../../features/modalStatus/modalStatus";
 
 const Contact = () => {
   const [showHideAnimation, setShowHideAnimation] = useState(false);
   const contactRef = useRef();
-  const [open, setOpen] = useState(true);
-  const navigate = useNavigate();
+  const modalOpen = useSelector((state) => state.modalStatus);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    if (open) {
+    if (modalOpen) {
       document.body.style.overflow = "hidden";
     }
     return () => {
       document.body.style.overflow = "unset";
     };
-  }, [open]);
+  }, [modalOpen]);
 
   const handleOutsideClick = (e) => {
     if(!contactRef.current.contains(e.target)){
@@ -27,12 +28,11 @@ const Contact = () => {
     setShowHideAnimation(true);
     setTimeout(() => {
       setShowHideAnimation(false);
-      setOpen(false);
-      navigate(-1);
+      dispatch(showModal(false));
     }, 1000);
   };
 
-  if (!open) {
+  if (!modalOpen) {
     return null;
   }
 

@@ -1,2 +1,2 @@
-import Blog from "./blog";
-export default Blog;
+import Feedback from "./feedback";
+export default Feedback;

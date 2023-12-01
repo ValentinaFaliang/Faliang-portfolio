@@ -5,8 +5,7 @@ import Footer from "../footer";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import "./app.scss";
 import Contact from "../modals";
-import Blog from "../blog";
-import { About } from "../sections";
+import Feedback from "../feedback";
 
 const App = () => {
   return (
@@ -15,14 +14,13 @@ const App = () => {
         <div className="wrapper__fullPage__content">
           <Header />
           <Routes>
-            <Route path="/" element={<Main />}>
-              <Route path="contact" element={<Contact />} />
-            </Route>
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/" element={<Main />} />
+            <Route path="/feedback" element={<Feedback />} />
           </Routes>
         </div>
         <Footer />
       </BrowserRouter>
+      <Contact />
     </div>
   );
 };
