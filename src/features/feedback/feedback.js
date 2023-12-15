@@ -1,15 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { loadFeedback, saveFeedback } from "./localstorage";
 
-const initialState = {
-  name: null,
-  massage: null,
-};
+const initialState = loadFeedback();
 
 export const feedbackSlice = createSlice({
   name: "feedback",
   initialState,
   reducers: {
-    createFeedback: (state, { payload }) => {},
+    createFeedback: (state, {payload}) => {
+      saveFeedback([
+        ...state,
+        payload
+      ]);
+      return [
+        ...state,
+        payload
+      ];
+    },
   },
 });
 

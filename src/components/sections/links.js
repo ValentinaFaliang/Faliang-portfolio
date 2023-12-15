@@ -1,18 +1,20 @@
 import React from "react";
 import "./links.scss";
-import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { showModal } from "../../features/modalStatus/modalStatus";
 
 const Links = () => {
-  const navigate = useNavigate();
-  const showModal = () => {
-    navigate("contact");
-  };
+  const dispatch = useDispatch();
+
   return (
     <section id="links" className="links">
       <div className="links__container">
         <div className="links__container__left">
           <h4>NEED A CREATIVE WEB DEVELOPER? LET'S BUILD SOMETHING.</h4>
-          <button onClick={showModal}>
+          <button onClick={(event) => {
+                  event.preventDefault();
+                  dispatch(showModal(true));
+                }}>
             <span>Get in touch</span>
           </button>
         </div>

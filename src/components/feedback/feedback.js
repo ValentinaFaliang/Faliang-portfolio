@@ -3,18 +3,47 @@ import "./feedback.scss";
 import RecievedFeedback from "../recievedFeedback";
 import envelope from "./../../assets/envelope/envelope.png";
 import { Outlet } from "react-router-dom";
+import { useForm, useWatch } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import { createFeedback } from "../../features/feedback/feedback";
+
 const Feedback = () => {
   const [published, setPublished] = useState(false);
   const [send, setSend] = useState(false);
+  const {
+    resetField,
+    watch,
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+  } = useForm({
+    defaultValues: { author: "Anonymous" },
+  });
+  const authorValue = watch("author");
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (authorValue === "Anonymous") {
+      resetField("namebox");
+    }
+  }, [authorValue]);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setSend(true);
-    }, 1000);
+    }, 2000);
     return () => {
       clearTimeout(timer);
       setSend(false);
     };
   }, [published]);
+
+  const onSubmit = (data) => {
+    setPublished(true);
+    dispatch(createFeedback(data))
+    console.log(data);
+  };
+  console.log(errors);
   return (
     <article className="feedback">
       <div className="feedback__wrapper">
@@ -28,29 +57,49 @@ const Feedback = () => {
           <>
             <section className="feedback__wrapper__inputBlock">
               <h2>You can give feedback to me here</h2>
-              <div className="feedback__wrapper__inputBlock__name">
-                <div className="feedback__wrapper__inputBlock__name__anon">
-                  <input
-                    type="radio"
-                    id="anon"
-                    name="author"
-                    value="Anonymous"
-                    checked
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                className="feedback__wrapper__inputBlock__form"
+              >
+                <div className="feedback__wrapper__inputBlock__form__name">
+                  <div className="feedback__wrapper__inputBlock__form__name__anon">
+                    <input
+                      type="radio"
+                      id="anon"
+                      value="Anonymous"
+                      {...register("author")}
+                    />
+                    <label for="anon">Anonymous</label>
+                  </div>
+                  <div className="feedback__wrapper__inputBlock__form__name__notanon">
+                    <input
+                      type="radio"
+                      id="notanon"
+                      value="Name"
+                      {...register("author")}
+                    />
+                    <label for="namebox">Your name:</label>
+                    <input
+                      type="text"
+                      placeholder={errors.namebox ? "Fill a field" : ""}
+                      disabled={authorValue === "Anonymous"}
+                      {...register("namebox", {
+                        required: authorValue !== "Anonymous",
+                      })}
+                    />
+                  </div>
+                </div>
+                <div className="feedback__wrapper__inputBlock__form__comment">
+                  <textarea
+                    type="text"
+                    placeholder={errors.textbox ? "Fill a field" : ""}
+                    {...register("textbox", { required: true })}
                   />
-                  <label for="anon">Anonymous</label>
+                  <button type="submit">
+                    <span>Publish</span>
+                  </button>
                 </div>
-                <div className="feedback__wrapper__inputBlock__name__notanon">
-                  <input type="radio" id="notanon" name="author" value="Name" />
-                  <label for="namebox">Your name:</label>
-                  <input type="text" name="namebox" />
-                </div>
-              </div>
-              <div className="feedback__wrapper__inputBlock__comment">
-                <textarea type="text" name="textbox" />
-                <button onClick={() => setPublished(true)}>
-                  <span>Publish</span>
-                </button>
-              </div>
+              </form>
             </section>
           </>
         )}
