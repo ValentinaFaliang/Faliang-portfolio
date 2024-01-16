@@ -1,4 +1,6 @@
 .feedback {
+
+  
   width: 100%;
   height: fit-content;
   margin: 0;
@@ -13,7 +15,7 @@
     margin: 100px 0;
 
     &__inputBlock {
-      background: azure;
+      background: var(--whitecolor);
       padding: 30px 50px;
       border-radius: 10px;
       width: 700px;
@@ -38,7 +40,7 @@
         font-size: 30px;
         line-height: 30px;
         text-transform: uppercase;
-        color: #cc7cf3;
+        color: var(--violetcolor);
         margin: 0;
       }
 
@@ -46,7 +48,7 @@
         width: 100%;
         &__name {
           width: 100%;
-          background: white;
+          background: var(--absolutewhitecolor);
           display: flex;
           flex-wrap: wrap;
           justify-content: space-between;
@@ -61,14 +63,14 @@
               border-radius: 50%;
               width: 20px;
               height: 20px;
-              border: 2px solid #cc7cf3;
+              border: 2px solid var(--violetcolor);
               transition: 0.2s all linear;
               margin-right: 5px;
               position: relative;
             }
 
             input:checked {
-              border: 6px solid #cc7cf3;
+              border: 6px solid var(--violetcolor);
             }
             
             label {
@@ -86,14 +88,14 @@
               border-radius: 50%;
               width: 20px;
               height: 20px;
-              border: 2px solid #cc7cf3;
+              border: 2px solid var(--violetcolor);
               transition: 0.2s all linear;
               margin-right: 5px;
               position: relative;
             }
 
             input[type="radio"]:checked {
-              border: 6px solid #cc7cf3;
+              border: 6px solid var(--violetcolor);
             }
 
 
@@ -104,12 +106,12 @@
             }
 
             input {
-              border: 2px dashed #cc7cf3;
+              border: 2px dashed var(--violetcolor);
               resize: none;
               font-size: 16px;
             }
             input::placeholder {
-              color: red;
+              color: var(--red);
             }
             input:focus {
               outline: none;
@@ -126,14 +128,14 @@
           textarea {
             width: 100%;
             min-height: 250px;
-            border: 2px dashed #cc7cf3;
+            border: 2px dashed var(--violetcolor);
             resize: none;
             font-size: 16px;
             margin: 8px 0;
           }
 
           textarea::placeholder {
-            color: red;
+            color: var(--red);
           }
 
           textarea:focus {
@@ -143,8 +145,8 @@
 
           button {
             position: relative;
-            background-color: #cc7cf3;
-            border: 0.1rem solid white;
+            background-color: var(--violetcolor);
+            border: 0.1rem solid var(--absolutewhitecolor);
             height: 70px;
             width: 170px;
             max-width: 100%;
@@ -152,7 +154,7 @@
 
             span {
               font-family: "Changa", sans-serif;
-              color: white;
+              color: var(--absolutewhitecolor);
               font-size: 15px;
               text-transform: uppercase;
             }

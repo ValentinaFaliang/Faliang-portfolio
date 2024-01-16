@@ -3,7 +3,7 @@ import "./feedback.scss";
 import RecievedFeedback from "../recievedFeedback";
 import envelope from "./../../assets/envelope/envelope.png";
 import { Outlet } from "react-router-dom";
-import { useForm, useWatch } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { createFeedback } from "../../features/feedback/feedback";
 
@@ -41,9 +41,7 @@ const Feedback = () => {
   const onSubmit = (data) => {
     setPublished(true);
     dispatch(createFeedback(data))
-    console.log(data);
   };
-  console.log(errors);
   return (
     <article className="feedback">
       <div className="feedback__wrapper">
@@ -92,7 +90,7 @@ const Feedback = () => {
                 <div className="feedback__wrapper__inputBlock__form__comment">
                   <textarea
                     type="text"
-                    placeholder={errors.textbox ? "Fill a field" : ""}
+                    placeholder={errors.textbox ? "Fill a field" : "Type a comment"}
                     {...register("textbox", { required: true })}
                   />
                   <button type="submit">

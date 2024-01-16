@@ -8,6 +8,13 @@ import { showModal } from "../../features/modalStatus/modalStatus";
 const Header = () => {
   const [scrollTop, setScrollTop] = useState(0);
   const dispatch = useDispatch();
+  const links = [
+    "/#about",
+    "/#experience",
+    "/#projects",
+    "/#links",
+    "/feedback",
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,8 +29,8 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    return () => window.scrollTo(0, 0)
-  }, [window.location.pathname])
+    return () => window.scrollTo(0, 0);
+  }, [window.location.pathname]);
 
   return (
     <>
@@ -41,46 +48,22 @@ const Header = () => {
               </Link>
             </div>
             <div className="header__nav__section__links">
-              <a
-                className={
-                  scrollTop > 30
-                    ? "header__nav__section__links__link2"
-                    : "header__nav__section__links__link"
-                }
-                href="/#about"
-              >
-                About
-              </a>
-              <a
-                className={
-                  scrollTop > 30
-                    ? "header__nav__section__links__link2"
-                    : "header__nav__section__links__link"
-                }
-                href="/#experience"
-              >
-                Experience
-              </a>
-              <a
-                className={
-                  scrollTop > 30
-                    ? "header__nav__section__links__link2"
-                    : "header__nav__section__links__link"
-                }
-                href="/#projects"
-              >
-                Projects
-              </a>
-              <a
-                className={
-                  scrollTop > 30
-                    ? "header__nav__section__links__link2"
-                    : "header__nav__section__links__link"
-                }
-                href="/#links"
-              >
-                Links
-              </a>
+              {links.map((link) => {
+                return (
+                  <a
+                    key={link}
+                    className={
+                      scrollTop > 30
+                        ? "header__nav__section__links__link2"
+                        : "header__nav__section__links__link"
+                    }
+                    href={link}
+                  >
+                    {link.replace(/\W/g, "")}
+                  </a>
+                );
+              })}
+              <span className="divider"></span>
               <a
                 className={
                   scrollTop > 30
@@ -94,17 +77,6 @@ const Header = () => {
               >
                 Contact
               </a>
-              <span className="divider"></span>
-              <Link
-                className={
-                  scrollTop > 30
-                    ? "header__nav__section__links__link2"
-                    : "header__nav__section__links__link"
-                }
-                to="/feedback"
-              >
-                Feedback
-              </Link>
             </div>
           </section>
         </nav>

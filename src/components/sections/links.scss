@@ -1,8 +1,8 @@
 .links {
   background: linear-gradient(
     0deg,
-    rgba(244, 220, 128, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
+    var(--yellowcolor) 0%,
+    var(--absolutewhitecolor) 100%
   );
   width: 100%;
   height: fit-content;
@@ -26,26 +26,11 @@
         margin-top: 0;
         margin-bottom: 30px;
       }
-      button {
-        position: relative;
-        background-color: #cc7cf3;
-        border: 0.1rem solid var(--whitecolor);
-        height: 70px;
-        width: 170px;
-        max-width: 100%;
-        z-index: 990;
-
-        span {
-          font-family: "Changa", sans-serif;
-          color: var(--whitecolor);
-          font-size: 15px;
-          text-transform: uppercase;
-        }
-      }
     }
 
     &__right {
       ul {
+        list-style-type: none;
         li {
           padding-left: 5px;
           text-transform: uppercase;
@@ -71,27 +56,27 @@
             transition: all 0.3s ease 0s;
             background: linear-gradient(
               90deg,
-              rgba(255, 187, 187, 1) 0%,
-              rgba(255, 170, 170, 1) 35%,
-              rgba(255, 255, 255, 1) 100%
+              var(--pinkgradientcolor) 0%,
+              var(--brightpinkcolor) 35%,
+              var(--absolutewhitecolor) 100%
             );
           }
 
           a:hover {
-            color: #c879f4;
+            color: var(--violetcolor);
           }
 
-          a:hover:after{
+          a:hover:after {
             height: 100%;
             width: 100%;
             opacity: 1;
           }
-
         }
 
-        li::marker {
+        li::before {
           content: "✽";
-          color: rgba(255, 170, 170, 1);
+          margin-right: 5px;
+          color: var(--violetcolor);
         }
       }
     }

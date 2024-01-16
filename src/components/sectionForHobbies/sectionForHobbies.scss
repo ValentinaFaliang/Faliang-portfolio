@@ -1,0 +1,46 @@
+.hobbySection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--whitecolor);
+
+  figure {
+    margin: 0;
+    figcaption {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      color: var(--whitecolor);
+      
+
+      audio {
+        width: 100%;
+        min-height: 50px;
+        display: flex;
+        flex-basis: 100%;
+        justify-content: center;
+        animation: appear 2s;
+      }
+
+      img {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        animation: appear 2s;
+      }
+    }
+  }
+}
+
+@keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

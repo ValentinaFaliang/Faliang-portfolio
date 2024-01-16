@@ -1,5 +1,5 @@
 .headerMask {
-  background: #ffdada;
+  background: var(--lightpinkcolor);
   position: fixed;
   top: 0px;
   right: 0px;
@@ -10,7 +10,7 @@
 }
 
 .headerScrollMask {
-  background: #ffdada;
+  background: var(--lightpinkcolor);
   width: 100%;
   position: fixed;
   top: 0px;
@@ -22,7 +22,6 @@
 }
 
 .header {
-  --textcolor: azure;
   display: block;
   width: 100%;
   padding: 0 70px;
@@ -66,17 +65,16 @@
         gap: 20px;
         align-items: center;
 
-        &__link{
+        &__link {
           font-size: 20px;
-          color: var(--textcolor);
+          color: var(--whitecolor);
           text-transform: uppercase;
           padding: 0 22px;
           transition: all 0.3s ease 0s;
-
         }
-        &__link2{
+        &__link2 {
           font-size: 20px;
-          color:#c879f4;
+          color: var(--violetcolor);
           text-transform: uppercase;
           padding: 0 22px;
           transition: all 0.3s ease 0s;
@@ -101,17 +99,17 @@
           transition: all 0.3s ease 0s;
           background: linear-gradient(
             90deg,
-            rgba(255, 187, 187, 1) 0%,
-            rgba(255, 170, 170, 1) 35%,
-            rgba(255, 255, 255, 1) 100%
+            var(--pinkgradientcolor) 0%,
+            var(--brightpinkcolor) 35%,
+            var(--absolutewhitecolor) 100%
           );
         }
 
         a:hover {
-          color: #c879f4;
+          color: var(--violetcolor);
         }
 
-        a:hover:after{
+        a:hover:after {
           height: 100%;
           width: 100%;
           opacity: 1;
@@ -121,7 +119,7 @@
           content: "";
           height: 40px;
           width: 7px;
-          background: var(--textcolor);
+          background: var(--whitecolor);
         }
       }
     }

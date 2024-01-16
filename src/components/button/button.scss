@@ -1,0 +1,16 @@
+.mainBtn {
+  position: relative;
+  background-color: var(--violetcolor);
+  border: 0.1rem solid var(--whitecolor);
+  height: 70px;
+  width: 170px;
+  max-width: 100%;
+  z-index: 990;
+
+  span {
+    font-family: "Changa", sans-serif;
+    color: var(--whitecolor);
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+}

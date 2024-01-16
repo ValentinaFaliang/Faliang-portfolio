@@ -24,6 +24,16 @@ body {
   margin: 0;
   scroll-behavior: smooth;
   cursor: url("./assets/cursor/cursor-for-body.png"), auto;
+  --whitecolor: azure;
+  --absolutewhitecolor: rgba(255, 255, 255, 1);
+  --violetcolor: #cc7cf3;
+  --lightpinkcolor: #ffdada;
+  --pinkgradientcolor: rgba(255, 187, 187, 1);
+  --brightpinkcolor:  rgba(255, 170, 170, 1);
+  --peachcolor: #ffbbbb;
+  --yellowcolor: rgba(244, 220, 128, 1);
+  --blackcolor: rgb(22, 22, 22);
+  --red: red;
 }
 
 a {

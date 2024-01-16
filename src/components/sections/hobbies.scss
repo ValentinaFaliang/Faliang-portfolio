@@ -5,8 +5,7 @@
   width: 100%;
   height: fit-content;
   z-index: 100;
-  background-color: #ffbbbb;
-  // padding-bottom: 20px;
+  background-color: var(--peachcolor);
   &__btn {
     flex: 0 1 100%;
     display: flex;
@@ -21,17 +20,17 @@
 
     &__small{
       font-size: 15px;
-    color: #cc7cf3;
-    background-color: azure;
-    border: 0.1rem solid #cc7cf3;
+    color: var(--violetcolor);
+    background-color: var(--whitecolor);
+    border: 0.1rem solid var(--violetcolor);
     height: 50px;
     width: 100px;
     }
     &__big{
       font-size: 50px;
-      color: azure;
-      background-color: #cc7cf3;
-      border: 0.1rem solid azure;
+      color: var(--whitecolor);
+      background-color: var(--violetcolor);
+      border: 0.1rem solid var(--whitecolor);
       height: 200px;
       width: 400px;
     }
@@ -40,108 +39,84 @@
   &__container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     width: 100%;
     height: fit-content;
     position: relative;
     margin-bottom: 30px;
-    &__drawing {
-      width: 33%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      color: azure;
+    // &__drawing {
+    //   width: 33%;
+    //   display: flex;
+    //   flex-direction: row;
+    //   justify-content: center;
+    //   align-items: center;
+    //   flex-wrap: wrap;
+    //   color: var(--whitecolor);
 
-      button {
-        color: azure;
-        background-color: #cc7cf3;
-        border: 0.1rem solid azure;
-        height: 30px;
-        width: 60px;
-        max-width: 100%;
-        margin-left: 5px;
-      }
-      div {
-        display: flex;
-        flex-basis: 100%;
-        justify-content: center;
-        img {
-          width: 300px;
-          height: 300px;
-          overflow: hidden;
-          animation: appear 2s;
-        }
-      }
-    }
+      
+    //   div {
+    //     display: flex;
+    //     flex-basis: 100%;
+    //     justify-content: center;
+    //     img {
+    //       width: 300px;
+    //       height: 300px;
+    //       overflow: hidden;
+    //       animation: appear 2s;
+    //     }
+    //   }
+    // }
 
-    &__music {
-      width: 33%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      color: azure;
+    // &__music {
+    //   width: 33%;
+    //   display: flex;
+    //   flex-direction: row;
+    //   justify-content: center;
+    //   align-items: center;
+    //   flex-wrap: wrap;
+    //   color: var(--whitecolor);
 
-      figure {
-        margin: 0;
-        figcaption {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          flex-wrap: wrap;
-          color: azure;
-          button {
-            color: azure;
-            background-color: #cc7cf3;
-            border: 0.1rem solid azure;
-            height: 30px;
-            width: 60px;
-            max-width: 100%;
-            margin-left: 5px;
-          }
-          audio {
-            display: flex;
-            flex-basis: 100%;
-            justify-content: center;
-            animation: appear 2s;
-          }
-        }
-      }
-    }
+    //   figure {
+    //     margin: 0;
+    //     figcaption {
+    //       display: flex;
+    //       flex-direction: row;
+    //       justify-content: center;
+    //       align-items: center;
+    //       flex-wrap: wrap;
+    //       color: var(--whitecolor);
 
-    &__character {
-      width: 33%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      color: azure;
+    //       audio {
+    //         display: flex;
+    //         flex-basis: 100%;
+    //         justify-content: center;
+    //         animation: appear 2s;
+    //       }
+    //     }
+    //   }
+    // }
 
-      button {
-        color: azure;
-        background-color: #cc7cf3;
-        border: 0.1rem solid azure;
-        height: 30px;
-        width: 60px;
-        max-width: 100%;
-        margin-left: 5px;
-      }
-      div {
-        display: flex;
-        flex-basis: 100%;
-        justify-content: center;
-        img {
-          width: 300px;
-          height: 300px;
-          overflow: hidden;
-          animation: appear 2s;
-        }
-      }
-    }
+    // &__character {
+    //   width: 33%;
+    //   display: flex;
+    //   flex-direction: row;
+    //   justify-content: center;
+    //   align-items: center;
+    //   flex-wrap: wrap;
+    //   color: var(--whitecolor);
+
+    //   div {
+    //     display: flex;
+    //     flex-basis: 100%;
+    //     justify-content: center;
+    //     img {
+    //       width: 300px;
+    //       height: 300px;
+    //       overflow: hidden;
+    //       animation: appear 2s;
+    //     }
+    //   }
+    // }
   }
 }
 

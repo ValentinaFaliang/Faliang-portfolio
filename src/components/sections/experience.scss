@@ -1,38 +1,53 @@
 .experience {
   z-index: 5;
   width: 100%;
-  background-color: #ffdada;
+  background-color: var(--lightpinkcolor);
   margin: 0;
   padding: 100px 220px 40px 220px;
+
   &__header {
     h1 {
       font-size: 50px;
       line-height: 50px;
       text-transform: uppercase;
-      color: #cc7cf3;
+      color: var(--violetcolor);
       margin: 0;
     }
   }
 
   &__main {
     width: 100%;
-    dl {
-      border: dotted azure;
+
+    &__container {
+      border: dotted var(--whitecolor);
       border-radius: 3%;
       padding: 10px;
-      dt {
-        text-decoration: underline;
-        font-weight: 600;
+      padding-left: 20px;
+
+      &__title {
+        &__name {
+          text-decoration: underline;
+          font-weight: 600;
+          margin: 5px;
+        }
       }
-      dd {
-        details {
+
+      &__details {
+        &__item {
+          summary~* {
+            animation: sweep 1s;
+          }
+
           summary {
+            display: list-item;
             width: fit-content;
+            height: auto;
             padding: 5px;
             z-index: 7;
             background: transparent;
             transition: all 0.3s ease 0s;
             position: relative;
+            list-style-type: none;
           }
 
           summary::after {
@@ -45,18 +60,20 @@
             left: 0px;
             opacity: 1;
             transition: all 0.3s ease 0s;
-            background: linear-gradient(
-              90deg,
-              rgba(255, 187, 187, 1) 0%,
-              rgba(255, 170, 170, 1) 35%,
-              rgba(255, 255, 255, 1) 100%
-            );
+            background: linear-gradient(90deg,
+                var(--pinkgradientcolor) 0%,
+                var(--brightpinkcolor) 35%,
+                var(--absolutewhitecolor) 100%);
           }
-          summary::marker {
-            color: #cc7cf3;
+
+          summary::before {
+            content: "✽";
+            margin-right: 5px;
+            color: var(--violetcolor);
           }
+
           summary:hover {
-            color: #c879f4;
+            color: var(--violetcolor);
           }
 
           summary:hover:after {
@@ -67,31 +84,31 @@
 
           p {
             padding: 10px;
+            width: 100%;
+            height: auto;
+          }
 
-            ul {
-              li {
-                padding-left: 5px;
-              }
+          ul {
+            list-style-type: none;
+            li {
+              padding-left: 5px;
+              list-style-type: none;
+            }
 
-              li::marker {
-                content: "✽";
-                color: rgba(255, 170, 170, 1);
-              }
+            li::before {
+              content: "✽";
+              margin-right: 5px;
+              color: var(--violetcolor);
             }
           }
-        }
-        details summary ~ * {
-          opacity: 0;
-          transform: translateX(-10px);
-          transition: all 0.5s ease-in-out;
-        }
-        details[open] summary ~ * {
-          opacity: 1;
-          transform: translateX(0);
         }
       }
     }
   }
+}
+
+.details summary~* {
+  animation: sweep 1s;
 }
 
 @keyframes sweep {
@@ -99,6 +116,7 @@
     opacity: 0;
     transform: translateX(-10px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -109,6 +127,7 @@
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }

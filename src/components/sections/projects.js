@@ -1,10 +1,9 @@
 import React from "react";
 import "./projects.scss";
 import dictionary from "./../../assets/pictures/laptop_dictionary.png";
-import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
-  const navigate = useNavigate();
+  const stack = ['HTML', 'CSS/SCSS', 'React', 'Redux', 'Context' ]
   return (
     <>
       <section className="title" id="projects">
@@ -32,11 +31,11 @@ const Projects = () => {
                   <strong>Development tools:</strong>
                 </p>
                 <ul>
-                  <li>HTML</li>
-                  <li>CSS/SCSS</li>
-                  <li>React</li>
-                  <li>Redux</li>
-                  <li>Context</li>
+                  {stack.map((el) => {
+                    return (
+                      <li>{el}</li>
+                    )
+                  })}
                 </ul>
               </div>
               <div className="projects__container__left__info__btn">

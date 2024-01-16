@@ -9,6 +9,7 @@
       height: fit-content;
       display: flex;
       flex-direction: row-reverse;
+      flex-wrap: wrap;
       justify-content: space-between;
       margin: 0;
       padding: 0;
@@ -25,7 +26,7 @@
         img {
           width: 460px;
           height: auto;
-          filter: drop-shadow(7px -13px 1px #f4dd89);
+          filter: drop-shadow(7px -13px 1px var(--yellowcolor));
           transition: transform 0.2s;
           position: absolute;
           transition: transform 1s;
@@ -64,24 +65,30 @@
           margin: 0;
           white-space: nowrap;
         }
-
-        button {
-          position: relative;
-          background-color: #cc7cf3;
-          border: 0.1rem solid var(--whitecolor);
-          height: 70px;
-          width: 170px;
-          max-width: 100%;
-          z-index: 990;
-
-          span {
-            font-family: "Changa", sans-serif;
-            color: var(--whitecolor);
-            font-size: 15px;
-            text-transform: uppercase;
-          }
-        }
       }
     }
   }
 
+  @media only screen and (max-width: 1200px) {
+    figcaption {
+margin: 0 auto;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .greeting {
+      padding: 0 30px;
+      figure{
+        div{
+   img{
+    width: 350px;
+          height: auto;
+   }
+        }
+        figcaption {
+          margin: 0 auto;
+              }
+      }
+      
+  }
+}

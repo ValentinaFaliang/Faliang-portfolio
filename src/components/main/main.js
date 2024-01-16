@@ -15,7 +15,6 @@ const Main = () => {
   const location = useLocation();
 
   useEffect(() => {
-    console.log(location)
     const { hash } = location;
     if (hash !== '') {
       setTimeout(() => {

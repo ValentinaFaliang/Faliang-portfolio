@@ -19,19 +19,13 @@ import warm from "../../assets/characters/nuan_warm.png";
 import sky from "../../assets/characters/tian_sky.png";
 import "./hobbies.scss";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  generateNumb,
-} from "../../features/randomizer/randomizer";
+import { generateNumb } from "../../features/randomizer/randomizer";
+import ButtonForRandom from "../buttonForRandom";
+import SectionForHobbies from "../sectionForHobbies/sectionForHobbies";
 
 const drawings = [draw1, draw2, draw3, draw4, draw5, draw6];
 const songs = [lubov, rigged, yuhuachengdie, pieces, light, sea];
 const characters = [love, law, light2, cat, warm, sky];
-
-const mediaType = {
-  drawings: 'drawRandNumb',
-  songs: 'songRandNumb',
-  characters: 'charRandNumb'
-}
 
 const Hobbies = () => {
   const { drawRandNumb, songRandNumb, charRandNumb } = useSelector(
@@ -44,43 +38,46 @@ const Hobbies = () => {
     dispatch(generateNumb());
     setShowHobby(true);
   };
-
+  console.log(drawRandNumb);
   return (
     <article className="hobbies">
-      <div className= "hobbies__btn">
-        <button className={showHobby? "hobbies__btn__small" : "hobbies__btn__big"} onClick={showRandMedia}>Amuse me!</button>
+      <div className="hobbies__btn">
+        <button
+          className={showHobby ? "hobbies__btn__small" : "hobbies__btn__big"}
+          onClick={showRandMedia}
+        >
+          Amuse me!
+        </button>
       </div>
       {showHobby ? (
         <div className="hobbies__container">
-          <section className="hobbies__container__drawing">
-            <h2>My random drawing</h2>
-            <button onClick={() => dispatch(generateNumb(mediaType.drawings))}>Another</button>
-            <div>
-              <img key={drawRandNumb} src={drawings[drawRandNumb]} />
-            </div>
-          </section>
-          <section className="hobbies__container__music">
-            <figure>
-              <figcaption>
-                <h2>Random song from my playlist</h2>
-                <button onClick={() => dispatch(generateNumb(mediaType.songs))}>
-                  Refresh
-                </button>
-                <audio key={songRandNumb} controls loop src={songs[songRandNumb]}></audio>
-              </figcaption>
-            </figure>
-          </section>
-          <section className="hobbies__container__character">
-            <h2>Choose a character for today</h2>
-            <button onClick={() => dispatch(generateNumb(mediaType.characters))}>Tap</button>
-            <div>
-              <img key={charRandNumb} src={characters[charRandNumb]} />
-            </div>
-          </section>
+          <SectionForHobbies
+            title="My random drawing"
+            rand={drawRandNumb}
+            item={drawings}
+            itemName="drawings"
+            text="Another"
+          />
+
+          <SectionForHobbies
+            title="Random song from my playlist"
+            rand={songRandNumb}
+            item={songs}
+            itemName="songs"
+            text="Refresh"
+          />
+
+          <SectionForHobbies
+            title="Choose a character for today"
+            rand={charRandNumb}
+            item={characters}
+            itemName="characters"
+            text="Tap"
+          />
         </div>
       ) : null}
     </article>
   );
 };
-
+ 
 export default Hobbies;
