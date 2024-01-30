@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Faliang-portfolio/static/css/main.67231ed8.css",
+    "main.css": "/Faliang-portfolio/static/css/main.02960fff.css",
     "main.js": "/Faliang-portfolio/static/js/main.cc62fb3c.js",
     "static/media/Red_Pieces.mp3": "/Faliang-portfolio/static/media/Red_Pieces.7b5f39d2c9c607a9fb92.mp3",
     "static/media/The_plot_in_you_RIGGED.mp3": "/Faliang-portfolio/static/media/The_plot_in_you_RIGGED.f8da28b9f5ef6a20548c.mp3",
@@ -28,11 +28,11 @@
     "static/media/envelope.png": "/Faliang-portfolio/static/media/envelope.383124740337afd61322.png",
     "static/media/menu_close.png": "/Faliang-portfolio/static/media/menu_close.dbe85549bc6529f49a14.png",
     "index.html": "/Faliang-portfolio/index.html",
-    "main.67231ed8.css.map": "/Faliang-portfolio/static/css/main.67231ed8.css.map",
+    "main.02960fff.css.map": "/Faliang-portfolio/static/css/main.02960fff.css.map",
     "main.cc62fb3c.js.map": "/Faliang-portfolio/static/js/main.cc62fb3c.js.map"
   },
   "entrypoints": [
-    "static/css/main.67231ed8.css",
+    "static/css/main.02960fff.css",
     "static/js/main.cc62fb3c.js"
   ]
 }
