@@ -3,7 +3,12 @@ import Button from "../button/button";
 import "./links.scss";
 
 const Links = () => {
-  const links = ["Github", "Telegram", "Linkedin", "Instagram", "Source"];
+  const links = 
+  [{name: "Github", link: 'https://github.com/ValentinaFaliang'
+}, {name:"Telegram", link:'https://t.me/faliang'}, 
+{name:"Linkedin", link: 'https://linkedin.com/in/valentina-vlasenko-60b010230'}, 
+{name:"Instagram", link: 'https://www.instagram.com/yaznayuvchemsut'}, 
+{name: "Source", link: 'https://github.com/ValentinaFaliang?tab=repositories'}];
   return (
     <section id="links" className="links">
       <div className="links__container">
@@ -16,7 +21,7 @@ const Links = () => {
             {links.map((el) => {
               return (
                 <li>
-                  <a>{el}</a>
+                  <a href={el.link}>{el.name}</a>
                 </li>
               );
             })}

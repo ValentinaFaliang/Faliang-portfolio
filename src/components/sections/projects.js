@@ -1,9 +1,10 @@
 import React from "react";
 import "./projects.scss";
-import dictionary from "./../../assets/pictures/laptop_dictionary.png";
+import dictionary from "./../../assets/pictures/laptop_dictionary_big.png";
+import dictionary900 from './../../assets/pictures/laptop_dictionary_900.png';
 
 const Projects = () => {
-  const stack = ['HTML', 'CSS/SCSS', 'React', 'Redux', 'Context' ]
+  const stack = ['HTML', 'CSS/SCSS', 'React', 'Redux', 'Context']
   return (
     <>
       <section className="title" id="projects">
@@ -40,13 +41,14 @@ const Projects = () => {
               </div>
               <div className="projects__container__left__info__btn">
                 <button onClick={() => window.location.replace("https://bkrs.info/")}>
-                  <span>View project</span>
+                  <span>View project (currently not working)</span>
                 </button>
               </div>
             </div>
           </div>
           <div className="projects__container__right">
             <picture>
+              {/* <source media="(max-width: 930px)" srcset={dictionary900}/> */}
               <img src={dictionary} alt="法BKRS website" />
             </picture>
           </div>

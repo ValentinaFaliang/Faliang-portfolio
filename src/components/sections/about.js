@@ -13,7 +13,7 @@ const About = () => {
             My name is <label>Valentina Vlasenko</label> or simply <label>Faliang</label>. I’m a junior
             frontend software engineer & freelance web developer in
             Saint-Petersburg -- with roots in teaching chinese & chinese
-            translating. I'm passionate about art, technology, chinese and
+            translating. I'm passionate about technology, art, chinese and
             basically everything that has an influence on this wonderful world.
           </p>
           <p>
@@ -24,16 +24,11 @@ const About = () => {
             frameworks, etc.
           </p>
           <p>
-            My freelance web development roots are in Wordpress & Shopify, of
-            which I'm self taught. In 2017, I started at UCLA to broaden my
-            knowledge of the Node.js ecosystem. Since then, I fell in love with
-            & have been primarily using React & Redux in web applications. For
-            static sites, I love using Gatsby for creating blazing fast,
-            SEO-driven headless frontend user interfaces.
+            I began my journey in programming with the desire to create a Russian-Chinese dictionary that met my needs. While developing the dictionary with my partner, I realized that through programming, I could create useful tools for society. That's how my love for JavaScript began.
           </p>
           <p>
             Whether you're a business owner looking to get started on a app or
-            web development project with a freelance web developer, a developer
+            web development project with a freelance junior web developer, a developer
             looking to collaborate on something cool, or just wanting to say hi,
             shoot me a message and let's work together.
           </p>

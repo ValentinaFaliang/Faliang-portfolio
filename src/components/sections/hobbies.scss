@@ -32,7 +32,7 @@
       background-color: var(--violetcolor);
       border: 0.1rem solid var(--whitecolor);
       height: 200px;
-      width: 400px;
+      width: 40%
     }
   }
 
@@ -44,79 +44,6 @@
     height: fit-content;
     position: relative;
     margin-bottom: 30px;
-    // &__drawing {
-    //   width: 33%;
-    //   display: flex;
-    //   flex-direction: row;
-    //   justify-content: center;
-    //   align-items: center;
-    //   flex-wrap: wrap;
-    //   color: var(--whitecolor);
-
-      
-    //   div {
-    //     display: flex;
-    //     flex-basis: 100%;
-    //     justify-content: center;
-    //     img {
-    //       width: 300px;
-    //       height: 300px;
-    //       overflow: hidden;
-    //       animation: appear 2s;
-    //     }
-    //   }
-    // }
-
-    // &__music {
-    //   width: 33%;
-    //   display: flex;
-    //   flex-direction: row;
-    //   justify-content: center;
-    //   align-items: center;
-    //   flex-wrap: wrap;
-    //   color: var(--whitecolor);
-
-    //   figure {
-    //     margin: 0;
-    //     figcaption {
-    //       display: flex;
-    //       flex-direction: row;
-    //       justify-content: center;
-    //       align-items: center;
-    //       flex-wrap: wrap;
-    //       color: var(--whitecolor);
-
-    //       audio {
-    //         display: flex;
-    //         flex-basis: 100%;
-    //         justify-content: center;
-    //         animation: appear 2s;
-    //       }
-    //     }
-    //   }
-    // }
-
-    // &__character {
-    //   width: 33%;
-    //   display: flex;
-    //   flex-direction: row;
-    //   justify-content: center;
-    //   align-items: center;
-    //   flex-wrap: wrap;
-    //   color: var(--whitecolor);
-
-    //   div {
-    //     display: flex;
-    //     flex-basis: 100%;
-    //     justify-content: center;
-    //     img {
-    //       width: 300px;
-    //       height: 300px;
-    //       overflow: hidden;
-    //       animation: appear 2s;
-    //     }
-    //   }
-    // }
   }
 }
 
@@ -126,5 +53,18 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hobbies{
+    &__btn {
+
+      &__big{
+        font-size: xx-large;
+        height: 100px;
+      width: 70%
+      }
+    }
   }
 }

@@ -17,6 +17,7 @@
     &__form {
       width: 100%;
       padding: 0 30px;
+
       &__closebtn {
         width: 100%;
         display: flex;
@@ -43,9 +44,11 @@
           padding: 0 5px;
           text-transform: uppercase;
         }
+
         input[type="text"]:focus {
           outline-width: 0;
         }
+
         input::placeholder {
           color: var(--textcolorviolet);
           text-transform: uppercase;
@@ -67,15 +70,19 @@
           padding: 0 5px;
           text-transform: uppercase;
         }
+
         input[type="email"]:focus {
           outline-width: 0;
         }
+
         input[type="email"]::placeholder {
           color: var(--red);
         }
+
         input[type="number"]:focus {
           outline-width: 0;
         }
+
         input::placeholder {
           color: var(--textcolor);
           text-transform: uppercase;
@@ -95,9 +102,11 @@
           padding: 0 5px;
           text-transform: uppercase;
         }
+
         input[type="text"]:focus {
           outline-width: 0;
         }
+
         input::placeholder {
           color: var(--textcolorviolet);
           text-transform: uppercase;
@@ -120,10 +129,12 @@
           font-size: 16px;
           resize: none;
         }
+
         textarea[type="text"]:focus {
           outline-width: 0;
           height: auto;
         }
+
         textarea::placeholder {
           color: var(--red);
           text-transform: uppercase;
@@ -136,6 +147,7 @@
         justify-content: center;
         margin-bottom: 5px;
         padding: 5px;
+
         input {
           height: 30px;
           width: 60px;
@@ -154,6 +166,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -163,6 +176,7 @@
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -174,4 +188,68 @@
 
 .hideModal {
   animation: disappear 1s;
+}
+
+@media only screen and (max-width: 900px) {
+  .contact {
+    &__container {
+      width: 80%;
+      height: 600px;
+
+
+      &__form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        width: fit-content;
+        height: 100%;
+        padding: 0 10px;
+
+
+        &__name {
+          flex-wrap: wrap;
+          height: 100px;
+
+          input {
+            width: 100%;
+            font-size: 20px;
+          }
+        }
+
+        &__contacts {
+          flex-wrap: wrap;
+          height: 100px;
+
+          input {
+            width: 100%;
+            font-size: 20px;
+          }
+        }
+
+        &__subject {
+          height: 50px;
+
+          input {
+            height: 100%;
+            font-size: 20px;
+          }
+        }
+
+        &__message {
+          textarea {
+            font-size: 20px;
+          }
+        }
+
+        &__buttons{
+          input{
+            height: 60px;
+            width: 120px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
 }

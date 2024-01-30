@@ -1,12 +1,36 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "../../assets/logo/logo.png";
+import menu from "../../assets/logo/menu.png";
+import menuClosed from "../../assets/logo/menu_close.png";
 import "./header.scss";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { showModal } from "../../features/modalStatus/modalStatus";
 
+
+const useOnClickOutside = (ref, handler) => {
+  useEffect(() => {
+    const listener = (event) => {
+      if (!ref.current || ref.current.contains(event.target)) {
+        return;
+      }
+      handler(event);
+    };
+
+    document.addEventListener("mousedown", listener);
+    document.addEventListener("touchstart", listener);
+
+    return () => {
+      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("touchstart", listener);
+    };
+  }, [ref, handler]);
+};
+
 const Header = () => {
   const [scrollTop, setScrollTop] = useState(0);
+  const [openLinksMenu, setOpenLinksMenu] = useState(false);
+  const menuRef = useRef();
   const dispatch = useDispatch();
   const links = [
     "/#about",
@@ -15,6 +39,7 @@ const Header = () => {
     "/#links",
     "/feedback",
   ];
+  useOnClickOutside(menuRef, () => setOpenLinksMenu(false));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +56,8 @@ const Header = () => {
   useEffect(() => {
     return () => window.scrollTo(0, 0);
   }, [window.location.pathname]);
+
+
 
   return (
     <>
@@ -77,6 +104,44 @@ const Header = () => {
               >
                 Contact
               </a>
+            </div>
+            <div className="header__nav__section__menu">
+              <div className="header__nav__section__menu__img">
+                <img
+                  className={openLinksMenu ? 'hidden' : ''}
+                  onClick={() => setOpenLinksMenu(!openLinksMenu)}
+                  src={menu}
+                  alt="menu" />
+                <img
+                  className={!openLinksMenu ? 'hidden' : ''}
+                  onClick={() => setOpenLinksMenu(!openLinksMenu)}
+                  src={menuClosed}
+                  alt="menu" />
+              </div>
+              {/* {openLinksMenu && */}
+              <div ref={menuRef}
+                className={`header__nav__section__menu__mobileLinks 
+              ${openLinksMenu ? 'appear' : 'disappear'} ${!menuRef.current ? 'hiddenMenu' : ''}`}>
+                {links.map((link) => {
+                  return (
+                    <a
+                      key={link}
+                      href={link}
+                    >
+                      {link.replace(/\W/g, "")}
+                    </a>
+                  );
+                })}
+                <a
+                  onClick={(event) => {
+                    event.preventDefault();
+                    dispatch(showModal(true));
+                  }}
+                >
+                  Contact
+                </a>
+              </div>
+              {/* } */}
             </div>
           </section>
         </nav>

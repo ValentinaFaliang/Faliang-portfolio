@@ -32,6 +32,9 @@
         overflow: hidden;
         animation: appear 2s;
       }
+      h2{
+        text-align: center;
+      }
     }
   }
 }
@@ -42,5 +45,19 @@
     }
     100% {
       opacity: 1;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .hobbySection{
+      figure{
+        figcaption{
+          padding: 0 5px;
+          img{
+            width: 250px;
+            height: 250px;
+          }
+        }
+      }
     }
   }

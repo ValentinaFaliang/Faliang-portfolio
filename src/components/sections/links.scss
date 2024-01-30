@@ -1,13 +1,12 @@
 .links {
-  background: linear-gradient(
-    0deg,
-    var(--yellowcolor) 0%,
-    var(--absolutewhitecolor) 100%
-  );
+  background: linear-gradient(0deg,
+      var(--yellowcolor) 0%,
+      var(--absolutewhitecolor) 100%);
   width: 100%;
   height: fit-content;
   z-index: 6;
   padding-bottom: 10px;
+
   &__container {
     width: 100%;
     height: fit-content;
@@ -16,8 +15,13 @@
     padding: 0 220px;
     margin: 70px 0;
     justify-content: space-between;
+
     &__left {
-      width: 500px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      width: 60%;
       max-width: 100%;
 
       h4 {
@@ -31,6 +35,7 @@
     &__right {
       ul {
         list-style-type: none;
+
         li {
           padding-left: 5px;
           text-transform: uppercase;
@@ -38,6 +43,7 @@
           font-size: 18px;
 
           a {
+            color: var(--blackcolor);
             z-index: 7;
             background: transparent;
             transition: all 0.3s ease 0s;
@@ -54,12 +60,10 @@
             left: 0px;
             opacity: 1;
             transition: all 0.3s ease 0s;
-            background: linear-gradient(
-              90deg,
-              var(--pinkgradientcolor) 0%,
-              var(--brightpinkcolor) 35%,
-              var(--absolutewhitecolor) 100%
-            );
+            background: linear-gradient(90deg,
+                var(--pinkgradientcolor) 0%,
+                var(--brightpinkcolor) 35%,
+                var(--absolutewhitecolor) 100%);
           }
 
           a:hover {
@@ -80,5 +84,54 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .links {
+
+    &__container {
+      padding: 0 100px;
+
+      &__left {
+        h4 {
+          font-size: xx-large;
+          text-align: center;
+        }
+      }
+    }
+
+
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .links {
+
+    &__container {
+      padding: 0;
+      // margin: 70px 5px;
+      justify-content: center;
+
+      &__left {
+        width: 40%;
+        h4 {
+          line-height: 30px;
+          font-size:  large;
+          text-align: center;
+        }
+      }
+
+      &__right{
+        ul{
+          li{
+            padding-left: 0px;
+            font-size: medium;
+          }
+        }
+      }
+    }
+
+
   }
 }

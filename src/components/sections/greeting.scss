@@ -1,94 +1,198 @@
 .greeting {
+  width: 100%;
+  padding: 0 70px;
+  position: relative;
+  margin-top: 80px;
+
+  figure {
     width: 100%;
-    padding: 0 70px;
-    position: relative;
-    margin-top: 80px;
+    height: fit-content;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+    div {
+      padding-top: 55px;
+      display: flex;
+      height: auto;
+      width: 800px;
+      height: 460px;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        width: 460px;
+        height: auto;
+        filter: drop-shadow(7px -13px 1px var(--yellowcolor));
+        transition: transform 0.2s;
+        position: absolute;
+        transition: transform 1s;
+      }
+
+      img:hover {
+        transform: scale(1.2);
+      }
+
+      #faliang1 {
+        z-index: 10;
+        right: 30%;
+      }
+
+      #faliang2 {
+        z-index: 5;
+        right: 0%;
+      }
+    }
+
+    figcaption {
+      display: block;
+      margin-top: 130px;
+      line-height: 48px;
+      height: fit-content;
+      color: var(--whitecolor);
+
+      p {
+        font-size: 20px;
+        font-weight: 200;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 50px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin: 0;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 900px){
+
+  .greeting {
+    padding: 0 30px;
 
     figure {
-      width: 100%;
-      height: fit-content;
-      display: flex;
-      flex-direction: row-reverse;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin: 0;
-      padding: 0;
-
+      margin-bottom: 10px;
+      justify-content: center;
       div {
-        padding-top: 55px;
-        display: flex;
-        height: auto;
-        width: 800px;
-        height: 460px;
-        overflow: hidden;
-        position: relative;
-
+        margin: 0 auto;
         img {
-          width: 460px;
+          width: 400px;
           height: auto;
-          filter: drop-shadow(7px -13px 1px var(--yellowcolor));
-          transition: transform 0.2s;
-          position: absolute;
-          transition: transform 1s;
         }
-
-        img:hover {
-          transform: scale(1.2);
-        }
-
         #faliang1 {
           z-index: 10;
-          right: 30%;
+          right: 50%;
         }
 
         #faliang2 {
           z-index: 5;
-          right: 0%;
+          right: -10%;
         }
       }
 
       figcaption {
-        display: block;
-        margin-top: 130px;
-        line-height: 48px;
-        height: fit-content;
-        color: var(--whitecolor);
-        p {
-          font-size: 20px;
-          font-weight: 200;
-          margin: 0;
-        }
-        h1 {
-          font-size: 50px;
-          font-weight: 900;
-          text-transform: uppercase;
-          margin: 0;
-          white-space: nowrap;
-        }
+        
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+
       }
     }
-  }
 
-  @media only screen and (max-width: 1200px) {
-    figcaption {
-margin: 0 auto;
-    }
   }
+}
 
-  @media only screen and (max-width: 600px) {
-    .greeting {
-      padding: 0 30px;
-      figure{
-        div{
-   img{
-    width: 350px;
+@media only screen and (max-width: 900px) and (min-width: 600px)  {
+
+  .greeting {
+    padding: 0 30px;
+
+    figure {
+      margin-bottom: 10px;
+      justify-content: center;
+      div {
+        margin: 0 auto;
+        img {
+          width: 380px;
           height: auto;
-   }
         }
-        figcaption {
-          margin: 0 auto;
-              }
+        #faliang1 {
+          z-index: 10;
+          right: 40%;
+        }
+
+        #faliang2 {
+          z-index: 5;
+          right: 0;
+        }
       }
-      
+
+      figcaption {
+        
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+
+      }
+    }
+
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .greeting {
+    padding: 0 8px;
+
+    figure {
+      margin-bottom: 10px;
+      div {
+        margin: 0 auto;
+        width: fit-content;
+        height: 300px;
+        img {
+          position: relative;
+          width: 250px;
+          // height: fit-content;
+        }
+
+        #faliang1 {
+          z-index: 10;
+          right: 0%;
+        }
+
+        #faliang2 {
+          display: none;
+          z-index: 5;
+          right: 0;
+        }
+      }
+
+      figcaption {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+
+        h1{
+          font-size: x-large;
+        }
+      }
+    }
+
   }
 }
