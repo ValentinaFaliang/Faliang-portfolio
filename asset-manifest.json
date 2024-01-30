@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/Faliang-portfolio/static/css/main.19e99574.css",
+    "main.js": "/Faliang-portfolio/static/js/main.cc62fb3c.js",
+    "static/media/Red_Pieces.mp3": "/Faliang-portfolio/static/media/Red_Pieces.7b5f39d2c9c607a9fb92.mp3",
+    "static/media/The_plot_in_you_RIGGED.mp3": "/Faliang-portfolio/static/media/The_plot_in_you_RIGGED.f8da28b9f5ef6a20548c.mp3",
+    "static/media/faliang2.png": "/Faliang-portfolio/static/media/faliang2.0fbdbe6436e49d2fe957.png",
+    "static/media/lumen_lubov.mp3": "/Faliang-portfolio/static/media/lumen_lubov.194d7234ffc064586ee3.mp3",
+    "static/media/Lights_Theme.mp3": "/Faliang-portfolio/static/media/Lights_Theme.8808eb0edf0b072f29f9.mp3",
+    "static/media/BTS_Sea.mp3": "/Faliang-portfolio/static/media/BTS_Sea.ea299e3a0c8010d426a4.mp3",
+    "static/media/chinese_song.mp3": "/Faliang-portfolio/static/media/chinese_song.33c0619825e54eb7995d.mp3",
+    "static/media/faliang.png": "/Faliang-portfolio/static/media/faliang.4fbb138fe1ea2af667da.png",
+    "static/media/purple2.png": "/Faliang-portfolio/static/media/purple2.b88c5208e65ef7a1987a.png",
+    "static/media/yellow2.png": "/Faliang-portfolio/static/media/yellow2.d0d71d9a6079e1d5492d.png",
+    "static/media/purple3.png": "/Faliang-portfolio/static/media/purple3.5a2eba919e9cd7c3eb57.png",
+    "static/media/1.jpg": "/Faliang-portfolio/static/media/1.306327566281c600ee7d.jpg",
+    "static/media/white3.png": "/Faliang-portfolio/static/media/white3.94abd1d2c398d208509f.png",
+    "static/media/3.jpg": "/Faliang-portfolio/static/media/3.ea85f7a350651ddd21ad.jpg",
+    "static/media/5.jpg": "/Faliang-portfolio/static/media/5.8296e9e9e26243b41c9d.jpg",
+    "static/media/white4.png": "/Faliang-portfolio/static/media/white4.13c3307eb8bb6d7cf1e6.png",
+    "static/media/4.jpg": "/Faliang-portfolio/static/media/4.1f0f438f28308f85f3a8.jpg",
+    "static/media/2.jpg": "/Faliang-portfolio/static/media/2.0f6e1043b504828a704a.jpg",
+    "static/media/6.jpg": "/Faliang-portfolio/static/media/6.35052850840467cad6f0.jpg",
+    "static/media/laptop_dictionary_big.png": "/Faliang-portfolio/static/media/laptop_dictionary_big.379bc2a79d58a0226a7a.png",
+    "static/media/yellow3.png": "/Faliang-portfolio/static/media/yellow3.ebb8606a61b5978e1f04.png",
+    "static/media/laptop_dictionary_900.png": "/Faliang-portfolio/static/media/laptop_dictionary_900.5509da7d8e9bd4a28a88.png",
+    "static/media/logo.png": "/Faliang-portfolio/static/media/logo.15e933e4c6981af1cff2.png",
+    "static/media/envelope.png": "/Faliang-portfolio/static/media/envelope.383124740337afd61322.png",
+    "static/media/menu_close.png": "/Faliang-portfolio/static/media/menu_close.dbe85549bc6529f49a14.png",
+    "index.html": "/Faliang-portfolio/index.html",
+    "main.19e99574.css.map": "/Faliang-portfolio/static/css/main.19e99574.css.map",
+    "main.cc62fb3c.js.map": "/Faliang-portfolio/static/js/main.cc62fb3c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.19e99574.css",
+    "static/js/main.cc62fb3c.js"
+  ]
+}
