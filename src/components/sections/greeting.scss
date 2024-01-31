@@ -9,7 +9,6 @@
     height: fit-content;
     display: flex;
     flex-direction: row-reverse;
-    flex-wrap: wrap;
     justify-content: space-between;
     margin: 0;
     padding: 0;
@@ -71,7 +70,7 @@
   }
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 900px){
+@media only screen and (max-width: 1200px) and (min-width: 900px) {
 
   .greeting {
     padding: 0 30px;
@@ -79,12 +78,15 @@
     figure {
       margin-bottom: 10px;
       justify-content: center;
+
       div {
         margin: 0 auto;
+
         img {
           width: 400px;
           height: auto;
         }
+
         #faliang1 {
           z-index: 10;
           right: 50%;
@@ -97,7 +99,7 @@
       }
 
       figcaption {
-        
+
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -111,7 +113,7 @@
   }
 }
 
-@media only screen and (max-width: 900px) and (min-width: 600px)  {
+@media only screen and (max-width: 900px) and (min-width: 600px) {
 
   .greeting {
     padding: 0 30px;
@@ -119,12 +121,16 @@
     figure {
       margin-bottom: 10px;
       justify-content: center;
+      flex-wrap: wrap;
+
       div {
         margin: 0 auto;
+
         img {
           width: 380px;
           height: auto;
         }
+
         #faliang1 {
           z-index: 10;
           right: 40%;
@@ -137,7 +143,7 @@
       }
 
       figcaption {
-        
+
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -157,10 +163,13 @@
 
     figure {
       margin-bottom: 10px;
+      flex-wrap: wrap;
+
       div {
         margin: 0 auto;
         width: fit-content;
         height: 300px;
+
         img {
           position: relative;
           width: 250px;
@@ -188,7 +197,7 @@
         align-items: center;
         flex-direction: column;
 
-        h1{
+        h1 {
           font-size: x-large;
         }
       }
